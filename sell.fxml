@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysales">
+    <children>
+        <VBox prefHeight="734.0" prefWidth="201.0" spacing="10.0" style="-fx-background-color: #000000;">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="210.0">
+                    <children>
+                        <Label layoutX="59.0" layoutY="91.0" text="syam Pharmacy" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Button fx:id="back1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Buy" prefHeight="45.0" prefWidth="201.0" style="-fx-background-color: #c60909;" text="Buy">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="back11" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#callall" prefHeight="45.0" prefWidth="201.0" style="-fx-background-color: #c60909;" text="back">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <ComboBox fx:id="InsuranceCOMBO" layoutX="468.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" promptText="Insurance Company" />
+        <ComboBox fx:id="PharmasistCOMBO" layoutX="468.0" layoutY="186.0" prefWidth="150.0" promptText="Pharmasist Name" />
+        <HBox layoutX="237.0" layoutY="239.0" prefHeight="250.0" prefWidth="682.0" spacing="80.0">
+            <children>
+                <TableView fx:id="table_Customer" onKeyTyped="#searchCustomerName" prefHeight="250.0" prefWidth="164.0">
+                    <columns>
+                        <TableColumn fx:id="ID_col" prefWidth="38.0" text="ID" />
+                        <TableColumn fx:id="Cutomer_col" prefWidth="115.0" text="Customers" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="table_Doctor" prefHeight="250.0" prefWidth="151.0">
+                    <columns>
+                        <TableColumn fx:id="Doctors_col" prefWidth="150.0" text="Doctors" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="table_Med" prefHeight="250.0" prefWidth="237.0">
+                    <columns>
+                        <TableColumn fx:id="Med_col" prefWidth="114.0" text="Medications" />
+                        <TableColumn fx:id="Expire_Date_col" prefWidth="116.0" text="Expire_Date" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+        <Button fx:id="NEW" layoutX="429.0" layoutY="91.0" mnemonicParsing="false" onAction="#callman" prefHeight="25.0" prefWidth="227.0" text="New" />
+        <TableView fx:id="Cart" layoutX="940.0" layoutY="202.0" prefHeight="331.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="Name_col" prefWidth="115.0" text="Medicine Name" />
+                <TableColumn fx:id="Quantiity_col" prefWidth="103.0" text="Quantity" />
+                <TableColumn fx:id="Price_col" prefWidth="81.0" text="Price" />
+            </columns>
+        </TableView>
+        <HBox layoutX="237.0" layoutY="59.0" prefHeight="25.0" prefWidth="611.0" spacing="80.0">
+            <children>
+                <TextField fx:id="CustomerTXT" onKeyTyped="#searchCustomerName" prefHeight="25.0" prefWidth="150.0" promptText="Enter Customer Name" />
+                <TextField fx:id="DoctorTXT" onKeyTyped="#searchdoc" prefHeight="25.0" prefWidth="150.0" promptText="Enter Doctor Name" />
+                <TextField fx:id="MedicineTXT" onKeyTyped="#searchmed" prefHeight="25.0" prefWidth="150.0" promptText="Enter Medicine Name" />
+            </children>
+        </HBox>
+        <TextField fx:id="QuantityTXT" layoutX="237.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter Quantity" />
+        <ComboBox fx:id="PaymentCOMBO" layoutX="698.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" promptText="payment method" />
+        <Label alignment="CENTER" layoutX="237.0" layoutY="14.0" prefHeight="36.0" prefWidth="611.0" text="Medication Purchase Request">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1019.0" layoutY="138.0" prefHeight="54.0" prefWidth="142.0" text="CART">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Label>
+        <Button layoutX="343.0" layoutY="567.0" mnemonicParsing="false" onAction="#addCart" prefHeight="63.0" prefWidth="400.0" style="-fx-background-color: #399424;" text="Add to Cart">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="1049.0" layoutY="544.0" mnemonicParsing="false" onAction="#Delete" prefHeight="36.0" prefWidth="96.0" style="-fx-background-color: red;" text="Delete">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <DatePicker fx:id="date" layoutX="686.0" layoutY="190.0" promptText="the date" />
+        <Text fill="RED" layoutX="387.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="RED" layoutX="615.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="RED" layoutX="845.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="RED" layoutX="618.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="RED" layoutX="857.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

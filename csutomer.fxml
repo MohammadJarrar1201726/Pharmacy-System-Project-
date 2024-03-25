@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="635.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+    <tabs>
+        <Tab text="Customer">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add" mnemonicParsing="false" onAction="#ADDCustomer" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="col" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="search" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchgo" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_customer" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="col_cid" prefWidth="50.0" text="Cid" />
+                                <TableColumn fx:id="cname" prefWidth="124.0" text="CName" />
+                                <TableColumn fx:id="age" prefWidth="51.0" text="Age" />
+                                <TableColumn fx:id="gender" prefWidth="64.0" text="Gender" />
+                                <TableColumn fx:id="phone" prefWidth="112.0" text="Phone" />
+                                <TableColumn fx:id="inside" prefWidth="55.0" text="Insid" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="tname" alignment="CENTER" layoutX="222.0" layoutY="324.0" promptText="CName" />
+                        <TextField fx:id="tage" alignment="CENTER" layoutX="222.0" layoutY="357.0" promptText="Age" />
+                        <TextField fx:id="tinsid" alignment="CENTER" layoutX="436.0" layoutY="357.0" promptText="Insid" />
+                        <TextField fx:id="tphone" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="Phone" />
+                        <ComboBox fx:id="tgender" layoutX="349.0" layoutY="391.0" prefHeight="22.0" prefWidth="110.0" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Doctor">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="Dadd" mnemonicParsing="false" onAction="#ADDDoctor" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="Ddelte" layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteDoctor" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="DDoctor" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="Dsearch" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchDoctor" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Doctor" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="DId" prefWidth="73.0" text="DId" />
+                                <TableColumn fx:id="DName" prefWidth="140.0" text="DName" />
+                                <TableColumn fx:id="Dspecialty" prefWidth="157.0" text="Specialty" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="TDName" alignment="CENTER" layoutX="222.0" layoutY="324.0" promptText="DName" />
+                        <TextField fx:id="TDSpecialty" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="Specialty" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Insurance">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add1" mnemonicParsing="false" onAction="#ADDInsurance" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteInsurance" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="Insurancecol" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="Insurancesearch" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchInsurance" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Insurance" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="col_insid" prefWidth="50.0" text="Insid" />
+                                <TableColumn fx:id="col_instype" prefWidth="104.0" text="Instype" />
+                                <TableColumn fx:id="col_company" prefWidth="86.0" text="Company" />
+                                <TableColumn fx:id="col_coverageSdate" prefWidth="108.0" text="CoverageSdate" />
+                                <TableColumn fx:id="col_coverageEdate" prefWidth="108.0" text="CoverageEdate" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="TIinstype" alignment="CENTER" layoutX="222.0" layoutY="324.0" promptText="Instype" />
+                        <TextField fx:id="TIcompany" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="Company" />
+                        <DatePicker fx:id="TIcoverageSdate" layoutX="210.0" layoutY="365.0" promptText="CoverageSdate" />
+                        <DatePicker fx:id="TIcoverageEdate" layoutX="424.0" layoutY="365.0" promptText="CoverageEdate" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Invoice ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add2" mnemonicParsing="false" onAction="#ADDInvoice" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteInvoice" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="Invoicecol" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="searchInvoice" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchInvoice" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Invoice" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="vidIN" prefWidth="74.0" text="Vid" />
+                                <TableColumn fx:id="paymentMethIN" prefWidth="115.0" text="PaymentMeth" />
+                                <TableColumn fx:id="priceIN" minWidth="0.0" prefWidth="70.0" text="Price" />
+                                <TableColumn fx:id="pharidIN" minWidth="0.0" prefWidth="71.0" text="Pharid" />
+                                <TableColumn fx:id="cidIN" minWidth="0.0" prefWidth="64.0" text="Cid" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txt_Pharid" alignment="CENTER" layoutX="324.0" layoutY="359.0" promptText="Pharid" />
+                        <TextField fx:id="txt_PaymentMeth" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="PaymentMeth" />
+                        <TextField fx:id="txt_Cid" alignment="CENTER" layoutX="223.0" layoutY="324.0" prefHeight="25.0" prefWidth="148.0" promptText="Cid" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Manufacturer ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add3" mnemonicParsing="false" onAction="#ADDManufacturer" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteManufacturer" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="colManufacturer" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="searchManufacturer" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchManufacturer" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Manufacturer" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="midtab" prefWidth="56.0" text="Mid" />
+                                <TableColumn fx:id="addresstab" prefWidth="129.0" text="Address" />
+                                <TableColumn fx:id="mnametab" prefWidth="125.0" text="MName" />
+                                <TableColumn fx:id="phonetab" prefWidth="146.0" text="Phone" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="AddressTXT" alignment="CENTER" layoutX="324.0" layoutY="358.0" promptText="Address" />
+                        <TextField fx:id="MNameTXT" alignment="CENTER" layoutX="222.0" layoutY="324.0" promptText="MName" />
+                        <TextField fx:id="PhoneTXT" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="Phone" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Prescription">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#ADDPrescription" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeletePrescription" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="COLPrescription" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="searchPrescription" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchPrescription" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Prescription" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="tabdid" prefWidth="41.0" text="Did" />
+                                <TableColumn fx:id="tabmid" prefWidth="31.0" text="Mid" />
+                                <TableColumn fx:id="tabper_text" prefWidth="192.0" text="Per_text" />
+                                <TableColumn fx:id="tabper_date" prefWidth="82.0" text="Per_date" />
+                                <TableColumn fx:id="tabquantity" prefWidth="65.0" text="Quantity" />
+                                <TableColumn fx:id="tabcusid" prefWidth="45.0" text="Cusid" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="DidX" alignment="CENTER" layoutX="222.0" layoutY="324.0" prefHeight="25.0" prefWidth="70.0" promptText="Did" />
+                        <TextField fx:id="QuantityX" alignment="CENTER" layoutX="436.0" layoutY="363.0" promptText="Quantity" />
+                        <TextField fx:id="CusidX" alignment="CENTER" layoutX="223.0" layoutY="363.0" promptText="Cusid" />
+                        <TextField fx:id="Per_textX" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="Per_text" />
+                        <DatePicker fx:id="Per_dateX" layoutX="311.0" layoutY="394.0" promptText="Per_date" />
+                        <TextField fx:id="MidX" alignment="CENTER" layoutX="297.0" layoutY="324.0" prefHeight="25.0" prefWidth="73.0" promptText="Mid" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Medicine">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add21" mnemonicParsing="false" onAction="#ADDMedicine" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeleteMedicine" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="combMedicine" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="searchMedicine" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchMed" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Medicine" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="midmed" prefWidth="52.0" text="Mid" />
+                                <TableColumn fx:id="mTypemed" prefWidth="72.0" text="mType" />
+                                <TableColumn fx:id="dosagemed" minWidth="0.0" prefWidth="72.0" text="dosage" />
+                                <TableColumn fx:id="expiryDatemed" minWidth="0.0" prefWidth="88.0" text="expiryDate" />
+                                <TableColumn fx:id="pricemed" minWidth="0.0" prefWidth="64.0" text="price" />
+                                <TableColumn fx:id="quantitymed" minWidth="0.0" prefWidth="67.0" text="quantity" />
+                                <TableColumn fx:id="cidmed" minWidth="0.0" prefWidth="41.0" text="cid" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txtprice" alignment="CENTER" layoutX="223.0" layoutY="359.0" promptText="price" />
+                        <TextField fx:id="txtdosage" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="dosage" />
+                        <TextField fx:id="txtmType" alignment="CENTER" layoutX="223.0" layoutY="324.0" prefHeight="25.0" prefWidth="148.0" promptText="mType" />
+                        <TextField fx:id="txtquantity" alignment="CENTER" layoutX="437.0" layoutY="359.0" prefHeight="25.0" prefWidth="148.0" promptText="quantity" />
+                        <DatePicker fx:id="txtexpiryDate" layoutX="421.0" layoutY="400.0" promptText="expiryDateexpiryDate" />
+                        <TextField fx:id="txtcid" alignment="CENTER" layoutX="223.0" layoutY="400.0" promptText="Cid" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Pharmacist">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="371.0" prefWidth="178.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" opacity="0.98" prefHeight="438.0" prefWidth="177.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <children>
+                                        <Button fx:id="add211" mnemonicParsing="false" onAction="#ADDPharmacist" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add">
+                                            <font>
+                                                <Font name="System Bold Italic" size="23.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" onAction="#DeletePharmacist" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: red;" text="Delete">
+                                            <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="223.0" prefWidth="144.0" style="-fx-background-color: black;">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#callall" prefHeight="31.0" prefWidth="135.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="178.0" prefHeight="96.0" prefWidth="462.0" style="-fx-background-color: red;">
+                            <children>
+                                <ComboBox fx:id="combPharmacsist" layoutX="246.0" layoutY="36.0" prefHeight="35.0" prefWidth="152.0" />
+                                <TextField fx:id="searchPharmacist" alignment="CENTER" layoutX="56.0" layoutY="35.0" onKeyTyped="#searchPharm" prefHeight="36.0" prefWidth="154.0" promptText="Search">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="table_Pharmacist" layoutX="178.0" layoutY="96.0" prefHeight="216.0" prefWidth="457.0">
+                            <columns>
+                                <TableColumn fx:id="phidph" prefWidth="52.0" text="phid" />
+                                <TableColumn fx:id="phnameph" prefWidth="72.0" text="phname" />
+                                <TableColumn fx:id="ageph" minWidth="0.0" prefWidth="72.0" text="age" />
+                                <TableColumn fx:id="genderph" minWidth="0.0" prefWidth="88.0" text="gender" />
+                                <TableColumn fx:id="contact_infoph" minWidth="0.0" prefWidth="172.0" text="contact_info" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txtPharmacistAge" alignment="CENTER" layoutX="436.0" layoutY="324.0" promptText="age" />
+                        <TextField fx:id="txtPharamacistName" alignment="CENTER" layoutX="223.0" layoutY="324.0" prefHeight="25.0" prefWidth="148.0" promptText="name" />
+                        <TextField fx:id="txtPharmacistContact_info" alignment="CENTER" layoutX="437.0" layoutY="359.0" prefHeight="25.0" prefWidth="148.0" promptText="contact_informations" />
+                        <ComboBox fx:id="txtPharmacistGender" layoutX="222.0" layoutY="372.0" prefWidth="150.0" promptText="gender" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

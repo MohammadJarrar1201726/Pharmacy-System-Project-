@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rct">
+    <children>
+        <Label layoutX="709.0" layoutY="64.0" text="Bill">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="310.0" style="-fx-alignment: red;" text="Customer Information:" textFill="#f20303" />
+        <HBox layoutX="56.0" layoutY="72.0" prefHeight="100.0" prefWidth="400.0" spacing="20.0">
+            <children>
+                <VBox prefHeight="72.0" prefWidth="100.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="103.0" text="Pharmacy name:" />
+                        <Label prefHeight="17.0" prefWidth="97.0" text="Address:" />
+                        <Label prefHeight="17.0" prefWidth="75.0" text="Phone:" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="100.0" prefWidth="275.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="phname" prefHeight="17.0" prefWidth="309.0" text="Syam Pharmacy" />
+                        <Label fx:id="addr" prefHeight="17.0" prefWidth="281.0" text="lazeqya Street , Rammallah,Palestine " />
+                        <Label fx:id="phne" prefHeight="17.0" prefWidth="285.0" text="(056) 834 4332" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Separator layoutX="56.0" layoutY="169.0" prefWidth="400.0" />
+        <HBox layoutX="56.0" layoutY="192.0" prefHeight="100.0" prefWidth="300.0" spacing="20.0">
+            <children>
+                <VBox prefHeight="72.0" prefWidth="100.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="127.0" text="Date:" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="72.0" prefWidth="135.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="dt" prefHeight="17.0" prefWidth="137.0" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Separator layoutX="56.0" layoutY="291.0" prefWidth="400.0" />
+        <HBox layoutX="56.0" layoutY="327.0" prefHeight="100.0" prefWidth="282.0" spacing="20.0">
+            <children>
+                <VBox prefHeight="100.0" prefWidth="137.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="125.0" text="Name:" />
+                        <Label prefHeight="17.0" prefWidth="118.0" text="Insurance company:" />
+                        <Label prefHeight="17.0" prefWidth="153.0" text="Payment method:" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="100.0" prefWidth="137.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="cusname" prefHeight="17.0" prefWidth="168.0" />
+                        <Label fx:id="inscomp" prefHeight="17.0" prefWidth="161.0" />
+                        <Label fx:id="pay" prefHeight="17.0" prefWidth="159.0" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Separator layoutX="56.0" layoutY="426.0" prefWidth="400.0" />
+        <TableView fx:id="Bill_tb" layoutX="573.0" layoutY="122.0" prefHeight="331.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="mn_col" prefWidth="115.0" text="Medicine Name" />
+                <TableColumn fx:id="q_col" prefWidth="103.0" text="Quantity" />
+                <TableColumn fx:id="p_col" prefWidth="81.0" text="Price" />
+            </columns>
+        </TableView>
+        <HBox layoutX="56.0" layoutY="438.0" prefHeight="100.0" prefWidth="282.0" spacing="20.0">
+            <children>
+                <VBox prefHeight="100.0" prefWidth="137.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="125.0" text="Doctor Name" />
+                        <Label prefHeight="17.0" prefWidth="140.0" text="Pharmasist name" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="100.0" prefWidth="137.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="docname" prefHeight="17.0" prefWidth="168.0" />
+                        <Label fx:id="pharmname" prefHeight="17.0" prefWidth="161.0" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox layoutX="566.0" layoutY="463.0" prefHeight="67.0" prefWidth="317.0">
+            <children>
+                <Label alignment="CENTER" text="YOUR TOTAL :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="ttl" alignment="CENTER" prefHeight="57.0" prefWidth="144.0" text="Label" textFill="#00a102">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Button fx:id="back11" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="609.0" layoutY="621.0" mnemonicParsing="false" onAction="#callall" prefHeight="45.0" prefWidth="201.0" style="-fx-background-color: #c60909;" text="back">
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Text layoutX="299.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You For choosing Syam pharmacy">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
