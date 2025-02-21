@@ -5,7 +5,7 @@ public class Cart {
     int id;
     int cid;
     int oldq;
-
+    int newVar_JustForGitLearning;
     public Cart(String name, float price, int quantity) {
         this.Name=name;
         this.price=price;
